@@ -1,4 +1,4 @@
-Note for how to make deplay a server, install shadowsocks and serverspeeder
+# Tutorial for how to make deplay a server, install shadowsocks and serverspeeder
 
 ---
 
@@ -13,10 +13,10 @@ Note for how to make deplay a server, install shadowsocks and serverspeeder
   - save the file and exit vi editor.
 5. Run `service ssh restart`.
 6. Run command below to install shadowsocks.
-   `
+   ```
    apt-get install python-pip
    pip install shadowsocks
-   `
+   ```
 7. Create **/etc/shadowsocks.json** with content below:
    `
    {
@@ -34,13 +34,13 @@ Note for how to make deplay a server, install shadowsocks and serverspeeder
 9. Run `apt-get install linux-image-extra-3.13.0-24-generic` to install the kernel.
 10. Run `dpkg -l|grep linux-image` to list all your installed kernels.
 11. Unstall all kernels which is not **3.13.0-24-generic**, for my case, **step 10** gives me:
-  `
+  ```
 ii  linux-image-3.13.0-105-generic       3.13.0-105.152                    amd64        Linux kernel image for version 3.13.0 on 64 bit x86 SMP
 ii  linux-image-3.13.0-24-generic        3.13.0-24.47                      amd64        Linux kernel image for version 3.13.0 on 64 bit x86 SMP
 ii  linux-image-extra-3.13.0-105-generic 3.13.0-105.152                    amd64        Linux kernel extra modules for version 3.13.0 on 64 bit x86 SMP
 ii  linux-image-extra-3.13.0-24-generic  3.13.0-24.47                      amd64        Linux kernel extra modules for version 3.13.0 on 64 bit x86 SMP
 ii  linux-image-generic                  3.13.0.105.113                    amd64        Generic Linux kernel image
-  `
+  ```
   So I have to run `apt-get purge linux-image-3.13.0-105-generic linux-image-extra-3.13.0-105-generic` to delete redundant kernels.
   **Note**, you should replace your own redundant kernels in the last command.
 12. Reboot server `reboot`.
@@ -54,6 +54,6 @@ For now, your own vps is deployed, and just set up your shadowsocks client with 
 [Sign up with $20 promo](http://www.vultr.com/?ref=7102608-3B)
 
 ---
-Reference:
-http://wuchong.me/blog/2015/02/02/shadowsocks-install-and-optimize/
-https://github.com/91yun/serverspeeder
+*Reference*:
+1. http://wuchong.me/blog/2015/02/02/shadowsocks-install-and-optimize/
+2. https://github.com/91yun/serverspeeder
