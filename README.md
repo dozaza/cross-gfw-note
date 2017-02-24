@@ -2,7 +2,7 @@ Note for how to make deplay a server, install shadowsocks and serverspeeder
 
 ---
 
-1. First choose your favorite service provider, I choose [Vultr](https://www.vultr.com/) and its LA node.
+1. First choose your favorite service provider, I choose [Vultr](http://www.vultr.com/?ref=7102608-3B) and its LA node.
 2. Deloy a server on it, choose **Ubuntu 14.04** version and login with default password.
 3. Change root's password: `passwd root`.
 4. Edit `sshd_config` file: `vi /etc/ssh/sshd_config`:
@@ -52,3 +52,8 @@ ii  linux-image-generic                  3.13.0.105.113                    amd64
 For now, your own vps is deployed, and just set up your shadowsocks client with the ip, port and password which you have just written in /etc/shadowsocks, and now, all works!
 
 [Sign up with $20 promo](http://www.vultr.com/?ref=7102608-3B)
+
+---
+Reference:
+http://wuchong.me/blog/2015/02/02/shadowsocks-install-and-optimize/
+https://github.com/91yun/serverspeeder
