@@ -3,7 +3,7 @@
 ---
 
 1. First choose your favorite service provider, I choose [Vultr](http://www.vultr.com/?ref=7102608-3B) and its LA node.
-2. Deloy a server on it, choose **Ubuntu 14.04** version and login with default password.
+2. Deloy a server on it, choose **Ubuntu 14.04** version and login with default password: `ssh root@your-server-ip`.
 3. Change root's password: `passwd root`.
 4. Edit `sshd_config` file: `vi /etc/ssh/sshd_config`.
   - Comment `Port 22` with **#**: `#Port 22`. (Disable default ssh port)
