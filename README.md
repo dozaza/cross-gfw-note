@@ -1,4 +1,4 @@
-# Tutorial for how to make deplay a server, install shadowsocks and serverspeeder
+# Tutorial for how to deploy a server and install shadowsocks and serverspeeder
 
 ---
 
