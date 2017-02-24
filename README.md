@@ -14,7 +14,7 @@
 5. Run `service ssh restart`.
 6. Run command below to install shadowsocks.
 
-   ```shell
+   ```bash
    apt-get install python-pip
    pip install shadowsocks
    ```
@@ -35,7 +35,7 @@
 8. Run `uname -a` to make sure your server os's kernel is **3.13.0-24-generic**, if it is not, continue the tutorial, if it is, go to **step 13** directly.
 9. Run `apt-get install linux-image-extra-3.13.0-24-generic` to install the kernel.
 10. Run `dpkg -l|grep linux-image` to list all your installed kernels.
-11. Unstall all kernels which is not **3.13.0-24-generic**, for my case, **step 10** gives me:
+11. Unstall all kernels which is not **3.13.0-24-generic**, in my case, **step 10** gives me:
 
   ```
 ii  linux-image-3.13.0-105-generic       3.13.0-105.152                    amd64        Linux kernel image for version 3.13.0 on 64 bit x86 SMP
@@ -44,8 +44,10 @@ ii  linux-image-extra-3.13.0-105-generic 3.13.0-105.152                    amd64
 ii  linux-image-extra-3.13.0-24-generic  3.13.0-24.47                      amd64        Linux kernel extra modules for version 3.13.0 on 64 bit x86 SMP
 ii  linux-image-generic                  3.13.0.105.113                    amd64        Generic Linux kernel image
   ```
+
   So I have to run `apt-get purge linux-image-3.13.0-105-generic linux-image-extra-3.13.0-105-generic` to delete redundant kernels.
-  **Note**, you should replace your own redundant kernels in the last command.
+
+  **Note**, you should replace `linux-image-3.13.0-105-generic linux-image-extra-3.13.0-105-generic` with your own redundant kernels in the last command.
 12. Reboot server `reboot`.
 13. Run `wget -N --no-check-certificate https://raw.githubusercontent.com/91yun/serverspeeder/master/serverspeeder-all.sh && bash serverspeeder-all.sh` to install Serverspeeder.
 14. Run `ssserver -c /etc/shadowsocks.json -d start` to start shadowsocks.
@@ -57,6 +59,7 @@ For now, your own vps is deployed, and just set up your shadowsocks client with 
 [Sign up with $20 promo](http://www.vultr.com/?ref=7102608-3B)
 
 ---
+
 *Reference*:
 
 1. http://wuchong.me/blog/2015/02/02/shadowsocks-install-and-optimize/
